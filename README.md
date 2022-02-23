@@ -1,2 +1,2 @@
 # Client-Scheduler
-WGU Software 1 Project
+WGU Software 2 Project
