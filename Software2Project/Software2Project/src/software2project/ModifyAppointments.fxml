@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software2project.ModifyAppointmentsController">
+   <children>
+      <Label layoutX="30.0" layoutY="10.0" text="Client Appointments">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="AppointmentTableView" layoutY="45.0" onMouseClicked="#setSelectedAppointmentId" prefHeight="235.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="customerIdColumn" prefWidth="93.0" text="Customer ID" />
+          <TableColumn fx:id="customerNameColumn" prefWidth="104.0" text="Customer Name" />
+            <TableColumn fx:id="consultantNameColumn" prefWidth="78.0" text="Consultant" />
+            <TableColumn fx:id="appointmentTypeColumn" prefWidth="124.0" text="Appointment Type" />
+            <TableColumn fx:id="startTimeColumn" minWidth="0.0" prefWidth="100.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="100.0" text="End Time" />
+        </columns>
+      </TableView>
+      <Button layoutX="50.0" layoutY="300.0" mnemonicParsing="false" onAction="#addAppointmentButtonPushed" prefWidth="130.0" text="Add Appointment" />
+      <Button layoutX="225.0" layoutY="300.0" mnemonicParsing="false" onAction="#updateAppointmentButtonPushed" prefWidth="130.0" text="Update Appointment" />
+      <Button layoutX="395.0" layoutY="300.0" mnemonicParsing="false" onAction="#deleteAppointmentButtonPushed" prefWidth="130.0" text="Delete Appointment" />
+      <Button layoutX="525.0" layoutY="360.0" mnemonicParsing="false" onAction="#cancelButtonPushed" text="Cancel" />
+   </children>
+</AnchorPane>

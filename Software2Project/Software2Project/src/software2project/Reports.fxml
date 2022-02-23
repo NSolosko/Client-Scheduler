@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software2project.ReportsController">
+   <children>
+      <Label layoutX="25.0" layoutY="15.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="523.0" layoutY="358.0" mnemonicParsing="false" onAction="#cancelButtonPushed" text="Cancel" />
+      <Button layoutX="15.0" layoutY="317.0" mnemonicParsing="false" onAction="#MonthlyAppointmentTypesButtonPushed" text="Monthly Appointment Types" />
+      <Button layoutX="385.0" layoutY="317.0" mnemonicParsing="false" onAction="#clientsPerConsultantButtonPushed" prefWidth="168.0" text="Clients Per Consultant" />
+      <Button layoutX="200.0" layoutY="317.0" mnemonicParsing="false" onAction="#ConsultantSchedulesButtonPushed" prefWidth="168.0" text="Consultant Schedules" />
+      <TableView fx:id="UserAppointmentsTableView" layoutY="90.0" prefHeight="150.0" prefWidth="600.0" visible="false">
+        <columns>
+          <TableColumn fx:id="selectedUserTableColumn" prefWidth="94.0" text="Consultant" />
+          <TableColumn fx:id="customerTableColumn" prefWidth="94.0" text="Customer" />
+            <TableColumn fx:id="appointmentTypeTableColumn" prefWidth="152.0" text="Appointment Type" />
+            <TableColumn fx:id="appointmentStartTimeTableColumn" prefWidth="123.0" text="Start Time" />
+            <TableColumn fx:id="appointmentEndTimeTableColumn" prefWidth="137.0" text="End Time" />
+        </columns>
+      </TableView>
+      <Label fx:id="reportLabel" layoutX="25.0" layoutY="58.0" prefHeight="20.0" prefWidth="187.0" text="Monthly Appointment Types">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="AppointmentTypesThisMonthTextArea" layoutX="150.0" layoutY="115.0" prefHeight="150.0" prefWidth="300.0" visible="false" />
+      <ComboBox fx:id="selectedConsultantComboBox" layoutX="425.0" layoutY="253.0" onAction="#sortAppointmentsBySelectedUser" prefWidth="150.0" visible="false" />
+      <TextArea fx:id="ClientsPerConsultantTextArea" layoutX="150.0" layoutY="115.0" prefHeight="150.0" prefWidth="300.0" visible="false" />
+      <ComboBox fx:id="ClientsPerConsultantComboBox" layoutX="425.0" layoutY="278.0" onAction="#sortClientsBySelectedUser" prefWidth="150.0" visible="false" />
+   </children>
+</AnchorPane>
